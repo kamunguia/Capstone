@@ -36,13 +36,13 @@ def revenue():
  
 def main():
     years = []
-    for i in range(1995,2001):
+    for i in range(1988,1989):
         #year = i
         year = str(i)
         #year = ""
         data = [];
         url1= "http://www.imdb.com/search/title?sort=boxoffice_gross_us&title_type=feature&year=" + year + "," + year
-        url2= "http://www.imdb.com/search/title?sort=boxoffice_gross_us&title_type=feature&year=" + year + "," + year + "&page=2&ref_=adv_nxt"
+        #url2= "http://www.imdb.com/search/title?sort=boxoffice_gross_us&title_type=feature&year=" + year + "," + year + "&page=2&ref_=adv_nxt"
         
         html = requests.get(url1).text
         soup = BeautifulSoup(html, "html.parser")
@@ -75,8 +75,8 @@ def main():
                 #list1.append(isostring)            
                 list2.append(link.text)
         #print(list2) 
-        for i in range(0,50):
-            years.append(year)
+    for i in range(0,50):
+        years.append(year)
             
             
        
